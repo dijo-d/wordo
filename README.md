@@ -48,12 +48,12 @@ The model was fine-tuned on a custom English vocabulary dataset with the followi
 ```json
 {
   "word": "ephemeral",
-  "meaning": "lasting for a very short time",
-  "example": "The beauty of the cherry blossoms is ephemeral."
+  "meaning": "lasting for a very short time"
 }
 ```
 
 This format was converted into structured prompts to guide the LLaMA 3 model toward accurate word prediction.
+Thanks to Muniru Oladele Idris for the dataset English Word, Meaning, and Usage Examples.
 
 ---
 
