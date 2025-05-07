@@ -22,38 +22,18 @@ Trained using a custom dataset that includes **words, meanings, and usage exampl
 
 ## ✨ Key Features
 
-- 🎯 **Precision-first word generation**
 - 📘 Trained on a curated English vocabulary dataset
 - 🧠 Based on `Meta-Llama-3-8B-Instruct`
 - 📚 Ideal for educational use, vocabulary training, or linguistic projects
 
 ---
 
-## 🚀 Quick Start (Inference)
-
-You can load and use the model directly from Hugging Face:
-
-```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-model_id = "dijodaiju/llama-3-wordo-wordgen"
-
-tokenizer = AutoTokenizer.from_pretrained(model_id)
-model = AutoModelForCausalLM.from_pretrained(model_id)
-
-prompt = "A word meaning 'the fear of being forgotten'"
-inputs = tokenizer(prompt, return_tensors="pt")
-outputs = model.generate(**inputs, max_new_tokens=5)
-print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-```
-
----
 
 ## 🗂️ Repository Contents
 
 This GitHub repository contains:
 
-- 📓 `wordgen_demo.ipynb` – A simple notebook demonstrating model usage
+- 📓 `llama3_8b_hf.ipynb` – A simple notebook demonstrating model usage
 - 📁 Example prompts and outputs
 - 📝 Notes on fine-tuning, data format, and limitations
 
@@ -102,7 +82,21 @@ This project is open-sourced under the [MIT License](LICENSE).
 
 ---
 
+
+## 🙏 Credits
+
+Special thanks to Abid Ali Awan and to Muniru Oladele Idris for the dataset English Word, Meaning, and Usage Examples.
+
+---
+
 ## 👤 Author
 
 **Dijo Daiju**  
 🔗 [GitHub](https://github.com/dijo-d) | 🤗 [Hugging Face](https://huggingface.co/dijodaiju)
+
+
+## 🔬 Experimental Project Notice  
+This project was created as a learning experiment to explore fine-tuning LLMs.  
+**There may be significant issues, bugs, or unexpected behavior** - this was primarily for educational purposes rather than production use.  
+
+Use at your own risk, and please report any interesting findings!
